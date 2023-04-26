@@ -53,12 +53,18 @@ $(document).ready(function () {
           '</td>' +
           '</tr>').prependTo('#cand');
       });
+
       var successAlert = '<div class="alert alert-success alert-dismissible" role="alert">' +
         '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
         '<span aria-hidden="true">&times;</span></button>' +
         'Your AJAX request was successful!</div>';
 
-      $('#alert-container').append(successAlert);
+        $('#alert-container').append(successAlert);
+        setTimeout(function() {
+          $('#alert-container').children().fadeOut('slow', function() {
+            $(this).remove();
+          });
+        }, 1000);
     },
     error: function () {
       var errorAlert = '<div class="alert alert-danger alert-dismissible" role="alert">' +
@@ -111,7 +117,7 @@ $(function () {
     var formData = {
       name: $("input[name=name]").val(),
       email: $("input[name=email]").val(),
-      gender: $("input[name=gender]").val(),
+      gender: $("select[name=gender]").val(),
       number: $("input[name=number]").val(),
       address: $("input[name=address]").val(),
       customFile: $("input[name=customFile]").val(),
@@ -130,6 +136,7 @@ $(function () {
       dataType: "json",
       encode: true
     }).done(function (data, index) {
+
       $(".response")
         .empty()
         .prepend(JSON.stringify(data, null, 2));
@@ -160,6 +167,7 @@ $(function () {
       // increment the index after each iteration
 
     });
+
 
 
   });
@@ -246,7 +254,12 @@ $(document).ready(function () {
           '<span aria-hidden="true">&times;</span></button>' +
           'Your AJAX request was successful!</div>';
 
-        $('#alert-container').append(successAlert);
+          $('#alert-container').append(successAlert);
+          setTimeout(function() {
+            $('#alert-container').children().fadeOut('slow', function() {
+              $(this).remove();
+            });
+          }, 1000);
       },
       error: function () {
         var errorAlert = '<div class="alert alert-danger alert-dismissible" role="alert">' +
