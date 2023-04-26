@@ -46,3 +46,6 @@ img {
 .modal-footer {
   border-top: none!important;
 }
+#alert-container {
+  height: 40px;
+}
