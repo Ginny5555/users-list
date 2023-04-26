@@ -43,3 +43,6 @@ img {
     display: flex;
   }
 }
+.modal-footer {
+  border-top: none!important;
+}
