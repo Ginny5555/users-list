@@ -1,0 +1,45 @@
+img {
+  width: 60%;
+  height: 60%;
+}
+
+.col-xs-4,
+.col-md-2 {
+  margin-bottom: 20px;
+}
+
+.sel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around
+}
+
+.buttons {
+  margin-top: 40px;
+}
+
+.foot-spl {
+  display: none;
+}
+
+.foot-r {
+  display: visible;
+}
+
+@media (max-width: 576px) {
+  td {
+    font-size: 10px;
+  }
+
+  .foot-spl {
+    display: block;
+  }
+
+  .foot-r {
+    display: none;
+  }
+
+  .flx {
+    display: flex;
+  }
+}
